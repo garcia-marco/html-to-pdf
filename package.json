@@ -1,7 +1,7 @@
 {
-  "name": "html-pdf",
-  "version": "3.0.1",
-  "description": "HTML to PDF converter that uses phantomjs",
+  "name": "html-to-pdf",
+  "version": "0.0.1",
+  "description": "HTML to PDF converter that uses puppeteer",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -10,35 +10,31 @@
     "test": "test"
   },
   "bin": {
-    "html-pdf": "bin/index.js"
+    "html-to-pdf": "bin/index.js"
   },
   "scripts": {
     "test": "standard && tape test/index.js examples/*/test.js"
   },
-  "author": "Marc Bachmann",
+  "author": "Marco Garcia",
   "license": "MIT",
   "devDependencies": {
-    "phantomjs-prebuilt": "^2.1.16",
+    "puppeteer": "^13.1.3",
     "standard": "^5.1.1",
     "tap-spec": "^5.0.0",
     "tape": "^5.2.2"
   },
-  "optionalDependencies": {
-    "phantomjs-prebuilt": "^2.1.16"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/marcbachmann/node-html-pdf.git"
+    "url": "git://github.com/garcia-marco/html-to-pdf.git"
   },
   "keywords": [
     "html",
     "pdf",
-    "phantom",
-    "phantomjs",
+    "puppeteer",
     "nodejs"
   ],
   "bugs": {
-    "url": "https://github.com/marcbachmann/node-html-pdf/issues"
+    "url": "https://github.com/garcia-marco/html-to-pdf/issues"
   },
-  "homepage": "https://github.com/marcbachmann/node-html-pdf"
+  "homepage": "https://github.com/garcia-marco/html-to-pdf"
 }
