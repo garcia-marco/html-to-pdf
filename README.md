@@ -1,35 +1,24 @@
-# node-html-pdf
-## HTML to PDF converter that uses phantomjs
-![image](examples/businesscard/businesscard.png)  
-[Example Business Card](examples/businesscard/businesscard.pdf)  
- -> [and its Source file](examples/businesscard/businesscard.html)  
+## How to Setup: html-to-pdf.
+## HTML to PDF converter that uses puppeteer
 
-[Example Receipt](http://imgr-static.s3-eu-west-1.amazonaws.com/order.pdf)
-
-## Changelog
-
-Have a look at the releases page: https://github.com/marcbachmann/node-html-pdf/releases
-
-## Installation
-
-Install the html-pdf utility via [npm](http://npmjs.org/):
+#### Installation
 
 ```
-$ npm install -g html-pdf
+npm install html-to-pdf --save
 ```
 
 ## Command-line example
 
 ```
-$ html-pdf test/businesscard.html businesscard.pdf
+html-pdf test/businesscard.html businesscard.pdf
 ```
 
 ## Code example
 ```javascript
-var fs = require('fs');
-var pdf = require('html-pdf');
-var html = fs.readFileSync('./test/businesscard.html', 'utf8');
-var options = { format: 'Letter' };
+const fs = require('fs')
+const pdf = require('html-pdf')
+const html = fs.readFileSync('./test/businesscard.html', 'utf8')
+const options = { format: 'Letter' }
 
 pdf.create(html, options).toFile('./businesscard.pdf', function(err, res) {
   if (err) return console.log(err);
